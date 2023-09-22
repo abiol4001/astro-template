@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home">
+  <main class="">
+    <!-- Hero section -->
+    <section
+      style="background-image: url('hero-desktop.png');"
+      class="h-[calc(100vh-90px)] w-full bg-cover bg-center bg-no-repeat flex items-center justify-start px-4 lg:px-20"
+    >
+      <div class="container mx-auto py-16 ">
+        <h1 class="text-[40px] lg:text-[56px] max-w-[500px] font-bold text-white mb-4 leading-tight">
+          Give your body the best treatment!
+        </h1>
+        <p class="text-white text-sm md:text-base mb-8 max-w-[500px]">
+          Our expert team of doctors and nurses provide personalized care to
+          meet your individual needs.
+        </p>
+        <div class="flex flex-col md:flex-row items-center md:space-x-4">
+          <a
+            href="/book-appointment"
+            class="bg-white hover:scale-105 text-black py-3 md:py-4 px-4 rounded-md mb-4 md:mb-0 md:inline-block text-center transition duration-300 ease-in-out w-full md:w-[230px]"
+            >Book An Appointment</a
+          >
+          <a
+            href="/explore-treatment"
+            class="bg-transparent hover:scale-105 ring-inset ring-1 ring-white text-white py-3 md:py-4 px-4 rounded-md md:inline-block text-center transition duration-300 ease-in-out w-full md:w-[230px]"
+            >Explore Treatment</a
+          >
+        </div>
+      </div>
+    </section>
+
+	<!-- Our services -->
+	<section>
+		<div class="flex flex-col lg:flex-row lg:h-[864px] w-full items-center px-4 lg:px-20">
+			<div class="flex-1 flex flex-col gap-y-6">
+				<h2 class="font-bold text-[32px] lg:text-[48px]">Face & Body Treatments</h2>
+				<p class="max-w-[600px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+				<p class="max-w-[600px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+				<button class="w-fit">Book an Appointment</button>
+			</div>
+			<div class="flex-1">
+				<img src="treatment.png" alt="" class="h-[600px] w-[600px] object-contain">
+			</div>
+		</div>
+	</section>
+  </main>
+</Layout>
+
+<style></style>

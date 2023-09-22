@@ -1,0 +1,118 @@
+---
+const explore = ["Treatment", "Locations", "Services"];
+const resources = [
+  "Career",
+  "Community services",
+  "Blog",
+  "Voluntering",
+  "Jobs",
+];
+const about = [
+  "Contact",
+  "Help/Support",
+  "FAQ",
+  "Terms and Conditions",
+  "Partners",
+];
+
+const date = new Date()
+const year = date.getFullYear()
+
+---
+
+<footer
+  class="text-white bg-black h- w-full px-4 py-8 lg:p-20 flex flex-col gap-y-14"
+>
+  <div
+    class="flex flex-col gap-y-5 lg:flex-row justify-between items-center w-full"
+  >
+    <div class="">
+      <h3 class="bold text-lg">Subscribe to our newsletter</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="w-full lg:w-fit flex flex-col lg:justify-end">
+      <div class="flex flex-col lg:flex-row gap-3 w-full">
+        <input
+          type="email"
+          class="outline-none h-12 w-full lg:w-[400px] px-3 rounded-md bg-transparent ring-1 ring-white"
+        />
+        <button
+          class="outline-none h-12 w-[119px] rounded-md bg-transparent ring-1 ring-white hover:bg-white hover:text-black transition"
+          >Subscribe</button
+        >
+      </div>
+      <p class="text-xs mt-3">
+        By subscribing you agree to with our <span
+          class="underline cursor-pointer">Privacy Policy</span
+        >
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col lg:flex-row lg:pr-40">
+    <div class="w-1/4">
+      <p class="text-bold italic text-3xl flex-shrink-0">Site Logo</p>
+    </div>
+    <div class="w-3/4 flex flex-col lg:flex-row gap-y-10 lg:justify-between">
+      <div>
+        <h4 class="font-bold">Explore</h4>
+        <ul class="mt-5 flex flex-col gap-2">
+          {
+            explore.map((item) => (
+              <li class="hover:underline w-fit">
+                <a href="/">{item}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold">Resources</h4>
+        <ul class="mt-5 flex flex-col gap-2">
+          {
+            resources.map((item) => (
+              <li class="hover:underline w-fit">
+                <a href="/">{item}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold">Abous Us</h4>
+        <ul class="mt-5 flex flex-col gap-2">
+          {
+            about.map((item) => (
+              <li class="hover:underline w-fit">
+                <a href="/">{item}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <hr />
+    <div class="flex flex-col lg:flex-row mt-10 lg:justify-between">
+      <div class="flex flex-col lg:flex-row gap-5">
+        <p>Copyright© {year}. All right reserved.</p>
+        <div class="flex gap-5">
+          <p class="underline cursor-pointer">Privacy Policy</p>
+          <p class="underline cursor-pointer">Terms of Service</p>
+          <p class="underline cursor-pointer">Cookies Settings</p>
+        </div>
+      </div>
+      <div>
+        <p>
+          Developed by <a
+            href="https://github.com/abiol4001"
+            class="underline italic bold text-xl">Abdullah Oyewale</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
