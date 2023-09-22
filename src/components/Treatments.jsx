@@ -4,7 +4,7 @@ const Treatments = () => {
   const treatments = [
     {
       title: "Laser Treatment Consultation",
-      image: "treatment1.png",
+      image: "/treatment1.png",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
       price: 85,
@@ -12,7 +12,7 @@ const Treatments = () => {
     },
     {
       title: "Cool Sculpting Consultation",
-      image: "treatment2.png",
+      image: "/treatment2.png",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
       price: 80,
@@ -20,7 +20,7 @@ const Treatments = () => {
     },
     {
       title: "IPL Upper Chest",
-      image: "treatment3.png",
+      image: "/treatment3.png",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
       price: 75,
@@ -28,7 +28,7 @@ const Treatments = () => {
     },
     {
       title: "Underarm Botox",
-      image: "treatment4.png",
+      image: "/treatment4.png",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
       price: 62,
@@ -36,7 +36,7 @@ const Treatments = () => {
     },
     {
       title: "Laser Treatment Consultation",
-      image: "treatment5.png",
+      image: "/treatment5.png",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
       price: 70,
@@ -44,7 +44,7 @@ const Treatments = () => {
     },
     {
       title: "Body Botox",
-      image: "treatment6.png",
+      image: "/treatment6.png",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
       price: 50,
