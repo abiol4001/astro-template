@@ -1,0 +1,61 @@
+---
+import Treatments from "../components/Treatments";
+import Layout from "../layouts/Layout.astro";
+
+const treatments = [
+      {
+        title: "Laser Treatment Consultation",
+        image: "treatment1.png",
+        content: "",
+        price: 85,
+        time: "3",
+      },
+      {
+        title: "Cool Sculpting Consultation",
+        image: "treatment1.png",
+        content: "",
+        price: 80,
+        time: "3",
+      },
+      {
+        title: "IPL Upper Chest",
+        image: "treatment1.png",
+        content: "",
+        price: 75,
+        time: "2",
+      },
+      {
+        title: "Underarm Botox",
+        image: "treatment1.png",
+        content: "",
+        price: 62,
+        time: "1",
+      },
+      {
+        title: "Laser Treatment Consultation",
+        image: "treatment1.png",
+        content: "",
+        price: 70,
+        time: "2",
+      },
+      {
+        title: "Body Botox",
+        image: "treatment1.png",
+        content: "",
+        price: 50,
+        time: "1",
+      },
+    ];
+---
+
+<Layout title="Home">
+  <main>
+    <div class="text-center mt-10 px-4">
+        <h1 class="text-[32px] md:text-[48px] font-bold">Our Treaments</h1>
+        <p>Lorem ipsum, dolor  amet elit. Nostrum error illum!</p>
+    </div>
+    <section class="">
+        <Treatments />
+    </section>
+  </main>
+</Layout>
