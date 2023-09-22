@@ -2,10 +2,10 @@ import React from "react";
 
 const Activities = () => {
   const activities = [
-    { name: "Meditation", icon: "moon.svg" },
-    { name: "Therapy", icon: "chart.svg" },
-    { name: "Natural Beauty", icon: "heart-circle.svg" },
-    { name: "Massages", icon: "emoji-happy.svg" },
+    { name: "Meditation", icon: "/moon.svg" },
+    { name: "Therapy", icon: "/chart.svg" },
+    { name: "Natural Beauty", icon: "/heart-circle.svg" },
+    { name: "Massages", icon: "/emoji-happy.svg" },
   ];
 
   return (
