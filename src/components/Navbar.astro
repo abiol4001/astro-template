@@ -29,24 +29,14 @@ const menuItems = [
   </div>
   <div class="flex items-center gap-10">
     <!-- Mobile Menu Icon (Hamburger) -->
-    <button class="md:hidden text-white" id="mobileMenuButton">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        class="h-6 w-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
+    <button class="md:hidden text-white flex flex-col justify-between w-6 h-4 cursor-pointer" id="mobileMenuButton">
+        <div class="w-full h-1 bg-black rounded"></div>
+        <div class="w-5/6 h-1 bg-black rounded"></div>
+        <div class="w-4/6 h-1 bg-black rounded"></div>
     </button>
     <!-- Mobile Menu (Hidden by default) -->
     <ul
-      class="hidden md:hidden flex-col space-y-6 p-8 absolute bg-gray-400 top-20 left-0 right-0 z-20"
+      class="hidden md:hidden flex-col space-y-14 p-8 absolute bg-gray-200 top-20 left-0 right-0 z-20 h-[100vh]"
       id="mobileMenu"
     >
       {
@@ -55,7 +45,7 @@ const menuItems = [
           <li class="relative group">
             <a
               href={item.link}
-              class={`transition-all hover:scale-110 duration-300 ease-in-out text-xl
+              class={`transition-all hover:scale-110 duration-300 ease-in-out text-3xl
           {@if $page.url === ${item.link} || ($page.url === "/" && ${item.link} === "/")} underline{/}`}
             >
               {item.name}
@@ -64,14 +54,19 @@ const menuItems = [
         ))
       }
       <a
-        href="/book-appointment"
-        class="text-white bg-black hover:bg-white hover:text-black hover:outline transition w-fit px-4 py-2 rounded-[5px] hidden lg:block"
+        href="/contact"
+        class="text-white bg-black hover:scale-105 transition w-full text-center px-4 py-3 rounded-[5px] text-3xl lg:hidden block"
       >
-        Book Appointment
+        Book an Appointment
       </a>
+
     </ul>
 
-    <ul class="hidden md:flex space-x-4">
+
+    <!-- Desktop Menu (Hidden on small screen) -->
+
+
+    <ul class="hidden md:flex space-x-8 text-lg">
       {
         menuItems.map((item) => (
           <li class="relative group">
@@ -88,10 +83,10 @@ const menuItems = [
       }
     </ul>
     <a
-      href="/book-appointment"
-      class="text-white bg-black hover:bg-white hover:text-black hover:outline transition w-fit px-4 py-2 rounded-[5px] hidden lg:block"
+      href="/contact"
+      class="text-white bg-black hover:scale-105 transition px-4 w-fit py-2 rounded-[5px] hidden lg:block"
     >
-      Book Appointment
+      Book an Appointment
     </a>
   </div>
 </nav>
@@ -103,7 +98,10 @@ const menuItems = [
 
   mobileMenuButton.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
+
+    document.body.classList.toggle("overflow-hidden");
   });
+
 </script>
 
 <style>

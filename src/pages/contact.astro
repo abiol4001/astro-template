@@ -1,14 +1,95 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
+let name = "";
+let email = "";
+let message = "";
+let isMessageSent = false;
+
+function handleNameInput(event: { target: { value: string } }) {
+  name = event.target.value;
+}
+
+function handleEmailInput(event: { target: { value: string } }) {
+  email = event.target.value;
+}
+
+function handleMessageInput(event: { target: { value: string } }) {
+  message = event.target.value;
+}
+
+function handleSubmit(e: { preventDefault: () => void; }) {
+  // You can add your form submission logic here.
+  // For this example, we'll just simulate a successful submission.
+  e.preventDefault()
+  isMessageSent = true;
+}
 ---
 
-<Layout title="Home">
-	<main style="background-image: url('contact-bg.png');"
-      class="h-[calc(100vh-90px)] text-white w-full bg-cover bg-center bg-no-repeat flex justify-center px-4 lg:px-20">
-		<div class="text-center mt-10 px-4">
-        <h1 class="text-[32px] md:text-[48px] font-bold">Contact Us</h1>
-        <p>Lorem ipsum, dolor  amet elit. Nostrum error illum!</p>
+<Layout title="Site Name | Contact">
+  <main
+    style="background-image: url('contact-bg.png');"
+    class="h-[calc(100vh-90px)] text-white w-full bg-cover bg-center bg-no-repeat flex flex-col items-center px-4 lg:px-20"
+  >
+    <div class="text-center mt-10">
+      <h1 class="text-[32px] md:text-[48px] font-bold">Contact Us</h1>
+      <p>Lorem ipsum, dolor amet elit. Nostrum error illum!</p>
     </div>
-	</main>
+
+    <section class="mx-auto mt-8 w-full md:w-[560px]">
+      <form class= "flex flex-col gap-y-5"@submit={handleSubmit} >
+        <div class="">
+          <label for="name" class="block font-semibold"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full border rounded-lg py-2 px-3 text-gray-700 outline-none mt-1.5 h-12"
+            @input={handleNameInput}
+            value={name}
+            required
+          />
+        </div>
+        <div class="">
+          <label for="email" class="block font-semibold"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full border rounded-lg py-2 px-3 text-gray-700 outline-none mt-1.5 h-12"
+            @input={handleEmailInput}
+            value={email}
+            required
+          />
+        </div>
+        <div class="">
+          <label for="message" class="block font-semibold"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            class="w-full border rounded-lg py-2 px-3 text-gray-700 outline-none mt-1.5 "
+            @input={handleMessageInput}
+            value={message}
+            required></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-white hover:animate-bounce w-full md:w-[318px] text-black font-semibold h-12 px-4 rounded-lg mx-auto mt-20"
+        >
+          Submit
+        </button>
+      </form>
+      <div
+        class={`${isMessageSent ? "opacity-100": " opacity-0"} bg-green-500 text-white p-4 mt-4 rounded-lg shadow-lg transition-opacity duration-500 ease-in-out`}
+      >
+        <p>Message sent successfully!</p>
+      </div>
+    </section>
+  </main>
 </Layout>
