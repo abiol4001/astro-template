@@ -20,99 +20,115 @@ const year = date.getFullYear()
 
 ---
 
-<footer
-  class="text-white bg-black h- w-full px-4 py-8 lg:p-20 flex flex-col gap-y-14"
->
-  <div
-    class="flex flex-col gap-y-5 lg:flex-row justify-between items-center w-full"
-  >
+
+
+<footer class="text-white bg-black w-full px-4 py-8 lg:p-20 flex flex-col gap-y-14">
+  <!-- Newsletter Subscription Section -->
+  <div class="flex flex-col gap-y-5 lg:flex-row justify-between items-center w-full">
+    <!-- Subscription Text -->
     <div class="">
       <h3 class="bold text-lg">Subscribe to our newsletter</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
+    <!-- Subscription Form -->
     <div class="w-full lg:w-fit flex flex-col lg:justify-end">
-      <div class="flex flex-col lg:flex-row gap-3 w-full">
-        <input
-          type="email"
-          class="outline-none h-12 w-full lg:w-[400px] px-3 rounded-md bg-transparent ring-1 ring-white"
-        />
+      <form class="flex flex-col lg:flex-row gap-3 w-full">
+        <!-- Email Input -->
+        <div class="w-full lg:w-[400px]">
+          <label for="email" class="sr-only">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="outline-none h-12 w-full px-3 rounded-md bg-transparent ring-1 ring-white"
+            placeholder="Your Email"
+            aria-label="Email Address"
+            required
+          />
+        </div>
+        <!-- Subscribe Button -->
         <button
-          class="outline-none h-12 w-[119px] rounded-md bg-transparent ring-1 ring-white hover:bg-white hover:text-black transition"
-          >Subscribe</button
+          type="submit"
+          class="h-12 w-[119px] rounded-md bg-transparent ring-1 ring-white hover:bg-white hover:text-black transition"
+          aria-label="Subscribe"
         >
-      </div>
+          Subscribe
+        </button>
+      </form>
+      <!-- Subscription Agreement -->
       <p class="text-xs mt-3">
-        By subscribing you agree to with our <span
-          class="underline cursor-pointer">Privacy Policy</span
-        >
+        By subscribing, you agree to our <span class="underline cursor-pointer">Privacy Policy</span>
       </p>
     </div>
   </div>
 
+  <!-- Site Information -->
   <div class="flex flex-col lg:flex-row lg:pr-40">
+    <!-- Site Logo -->
     <div class="w-1/4">
       <p class="text-bold italic text-3xl flex-shrink-0">Site Logo</p>
     </div>
+    <!-- Navigation Sections -->
     <div class="w-3/4 flex flex-col lg:flex-row gap-y-10 lg:justify-between">
+      <!-- Explore Section -->
       <div>
         <h4 class="font-bold">Explore</h4>
         <ul class="mt-5 flex flex-col gap-2">
-          {
-            explore.map((item) => (
-              <li class="hover:underline w-fit">
-                <a href="/">{item}</a>
-              </li>
-            ))
-          }
+          <!-- Explore Links -->
+          {explore.map((item) => (
+            <li class="hover:underline w-fit">
+              <a href="/">{item}</a>
+            </li>
+          ))}
         </ul>
       </div>
+      <!-- Resources Section -->
       <div>
         <h4 class="font-bold">Resources</h4>
         <ul class="mt-5 flex flex-col gap-2">
-          {
-            resources.map((item) => (
-              <li class="hover:underline w-fit">
-                <a href="/">{item}</a>
-              </li>
-            ))
-          }
+          <!-- Resources Links -->
+          {resources.map((item) => (
+            <li class="hover:underline w-fit">
+              <a href="/">{item}</a>
+            </li>
+          ))}
         </ul>
       </div>
+      <!-- About Us Section -->
       <div>
-        <h4 class="font-bold">Abous Us</h4>
+        <h4 class="font-bold">About Us</h4>
         <ul class="mt-5 flex flex-col gap-2">
-          {
-            about.map((item) => (
-              <li class="hover:underline w-fit">
-                <a href="/">{item}</a>
-              </li>
-            ))
-          }
+          <!-- About Us Links -->
+          {about.map((item) => (
+            <li class="hover:underline w-fit">
+              <a href="/">{item}</a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
   </div>
 
+  <!-- Copyright and Credits -->
   <div>
     <hr />
     <div class="flex flex-col lg:flex-row gap-y-5 mt-10 lg:justify-between">
+      <!-- Copyright Information -->
       <div class="flex flex-col lg:flex-row gap-5">
-        <p>Copyright© {year}. All right reserved.</p>
+        <p>&copy; {year}. All rights reserved.</p>
+        <!-- Legal Links -->
         <div class="flex flex-col md:flex-row gap-y-2 gap-x-5">
           <p class="underline cursor-pointer">Privacy Policy</p>
           <p class="underline cursor-pointer">Terms of Service</p>
           <p class="underline cursor-pointer">Cookies Settings</p>
         </div>
       </div>
+      <!-- Credits -->
       <div>
         <p>
-          Developed by <a
-            href="https://github.com/abiol4001"
-            class="underline italic bold text-xl">Abdullah Oyewale</a>
+          Developed by <a href="https://github.com/abiol4001" class="underline italic bold text-xl">Abdullah Oyewale</a>
         </p>
       </div>
     </div>
   </div>
 </footer>
-
-

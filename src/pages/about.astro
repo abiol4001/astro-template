@@ -3,29 +3,30 @@ import Activities from "../components/Activities";
 import Layout from "../layouts/Layout.astro";
 ---
 
+
 <Layout title="Site Name | About">
   <main>
+    <div class="flex flex-col-reverse lg:flex-row gap-y-10 lg:h-[864px] w-full items-center px-4 md:px-20 lg:px-20 py-10">
+      <div class="flex-1 flex flex-col gap-y-6">
+        <h2 class="text-2xl lg:text-3xl font-bold">About Us</h2>
+        <p class="text-sm md:text-base max-w-[630px]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+        <!-- Add more paragraphs as needed -->
+      </div>
+      <div class="flex-1 flex justify-end">
+        <img src="about1.png" alt="About Us Image 1" class="lg:h-[600px] w-[600px] object-contain" />
+      </div>
+    </div>
+    
     <div class="flex flex-col-reverse lg:flex-row gap-y-10 lg:h-[864px] w-full items-center px-4 lg:px-20 py-10">
-			<div class="flex-1 flex flex-col gap-y-6">
-				<h2 class="font-bold text-[30px] lg:text-[48px]">About Us</h2>
-				<p class="max-w-[630px] text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-				<p class="max-w-[630px] text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-				<p class="max-w-[630px] text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-				<p class="max-w-[630px] text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-				<!-- <button class="w-fit ring-1 ring-black rounded-md px-4 py-2 hover:animate-bounce transition-all">Book an Appointment</button> -->
-			</div>
-			<div class="flex-1 flex justify-end">
-				<img src="about1.png" alt="" class="lg:h-[600px] w-[600px] object-contain">
-			</div>
-		</div>
-    <div class="flex flex-col-reverse lg:flex-row gap-y-10 lg:h-[864px] w-full items-center px-4 lg:px-20 py-10">
-			<div class="flex-1 flex flex-col gap-y-14">
+      <div class="flex-1 flex flex-col gap-y-14">
         <Activities />
-				<a href="/contact" class="w-fit ring-1 ring-black rounded-md px-4 py-2 hover:animate-bounce transition-all">Book an Appointment</a>
-			</div>
-			<div class="flex-1 flex justify-end">
-				<img src="about2.png" alt="" class="lg:h-[600px] w-[600px] object-contain">
-			</div>
-		</div>
+        <a href="/contact" class="w-fit ring-1 ring-black rounded-md px-4 py-2 hover:animate-bounce transition-all md:ml-24 lg:ml-0">Book an Appointment</a>
+      </div>
+      <div class="flex-1 flex justify-end">
+        <img src="about2.png" alt="About Us Image 2" class="lg:h-[600px] w-[600px] object-contain" />
+      </div>
+    </div>
   </main>
 </Layout>
